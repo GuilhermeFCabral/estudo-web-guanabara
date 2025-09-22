@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+
+            <p>
+                <label for="ano">Ano de Nascimento: </label>
+                <input type="number" name="ano" id="ano" step="1" required oninput="saida.innerHTML = CalcIdade(Number(ano.value))">
+            </p>
+            <p>
+                <label for="saida">Sua idade: </label>
+                <output id="saida"> 0</output>
+            </p>
+
+            <p><input type="submit" value="Enviar"></p>
+        </fieldset>
+
+    </form>
+
+    <script>
+        function CalcIdade(ano_nasc) {
+            var idade = 2025 - ano_nasc
+            return idade;
+        }
+
+    </script>
+</body>
+</html>
